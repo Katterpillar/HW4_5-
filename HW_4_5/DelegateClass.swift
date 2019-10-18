@@ -14,7 +14,7 @@ class DelegateClass:  UIViewController, UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         
     var theClassName: String {
-            return NSStringFromClass(type(of: self))
+            return NSStringFromClass(type(of: viewController))
         }
         
         print(theClassName)
