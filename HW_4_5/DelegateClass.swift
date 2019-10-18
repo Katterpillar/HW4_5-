@@ -13,7 +13,11 @@ class DelegateClass:  UIViewController, UINavigationControllerDelegate {
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         
-        print("рас рас")
+    var theClassName: String {
+            return NSStringFromClass(type(of: self))
+        }
+        
+        print(theClassName)
         
     }
     
