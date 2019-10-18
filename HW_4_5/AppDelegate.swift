@@ -10,15 +10,33 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    
 
     var window: UIWindow?
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        let item1 = UITabBarItem.init(tabBarSystemItem: .contacts, tag: 1)
+//        let item2 = UITabBarItem.init(tabBarSystemItem: .search, tag: 2)
+//        
+//        let rootViewController = ViewController()
+//        rootViewController.tabBarItem = item1
+//        let secondVC = SecondViewController()
+//        secondVC.tabBarItem = item2
+        
+      
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = TapBar()
+        window?.backgroundColor = UIColor(red: 0.96, green: 0.92, blue: 0.97, alpha: 1.0)
+        window?.makeKeyAndVisible()
+
+        
+        
         return true
     }
-
+   
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
